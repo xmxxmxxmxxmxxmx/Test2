@@ -2153,3 +2153,43 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2018-12-27 19:55:35.105  INFO 12372 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[.[/SpringDataJpaTest]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-27 19:55:35.106  INFO 12372 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2018-12-27 19:55:35.118  INFO 12372 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-01-12 20:15:36.222  INFO 9176 --- [restartedMain] c.c.s.SsshomeworkApplication             : Starting SsshomeworkApplication on nkgw10nh1966 with PID 9176 (E:\test1\target\classes started by Mingxing.Xia in E:\test1)
+2019-01-12 20:15:36.226  INFO 9176 --- [restartedMain] c.c.s.SsshomeworkApplication             : No active profile set, falling back to default profiles: default
+2019-01-12 20:15:36.289  INFO 9176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-12 20:15:36.290  INFO 9176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-12 20:15:37.674  WARN 9176 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.connext.springdatajpa]' package. Please check your configuration.
+2019-01-12 20:15:37.802  INFO 9176 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-12 20:15:37.802  INFO 9176 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-12 20:15:37.879  INFO 9176 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 3 repository interfaces.
+2019-01-12 20:15:37.924  INFO 9176 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-12 20:15:37.926  INFO 9176 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-12 20:15:37.950  INFO 9176 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.connext.springdatajpa.repository.ArticleRepository.
+2019-01-12 20:15:37.951  INFO 9176 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.connext.springdatajpa.repository.CommentRepository.
+2019-01-12 20:15:37.952  INFO 9176 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.connext.springdatajpa.repository.UserRepository.
+2019-01-12 20:15:37.955  INFO 9176 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2019-01-12 20:15:38.546  INFO 9176 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$18b01720] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-12 20:15:38.791  INFO 9176 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheConfig' of type [com.connext.springdatajpa.util.RedisCacheConfig$$EnhancerBySpringCGLIB$$d4697b8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-12 20:15:39.486  INFO 9176 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-01-12 20:15:39.511  INFO 9176 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-12 20:15:39.512  INFO 9176 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-12 20:15:39.520  INFO 9176 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\maven\apache-maven-3.1.0\bin;D:\git\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Users\mingxing.xia\AppData\Local\Microsoft\WindowsApps;C:\Users\mingxing.xia\AppData\Local\GitHubDesktop\bin;.]
+2019-01-12 20:15:39.639  INFO 9176 --- [restartedMain] o.a.c.c.C.[.[.[/SpringDataJpaTest]       : Initializing Spring embedded WebApplicationContext
+2019-01-12 20:15:39.640  INFO 9176 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3350 ms
+2019-01-12 20:15:40.142  INFO 9176 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-12 20:15:40.208  INFO 9176 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-12 20:15:40.211  INFO 9176 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-01-12 20:15:40.402  INFO 9176 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-12 20:15:40.548  INFO 9176 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-12 20:15:40.549  WARN 9176 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-01-12 20:15:40.688  INFO 9176 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-01-12 20:15:40.701  INFO 9176 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-12 20:15:42.009  INFO 9176 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-12 20:15:42.091  INFO 9176 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-01-12 20:15:42.559  INFO 9176 --- [restartedMain] c.c.springdatajpa.util.RedisCacheConfig  : JedisPool注入成功！！
+2019-01-12 20:15:42.559  INFO 9176 --- [restartedMain] c.c.springdatajpa.util.RedisCacheConfig  : redis地址：127.0.0.1:6379:123456
+2019-01-12 20:15:43.134  INFO 9176 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-12 20:15:43.188  WARN 9176 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-12 20:15:43.875  INFO 9176 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/SpringDataJpaTest'
+2019-01-12 20:15:43.880  INFO 9176 --- [restartedMain] c.c.s.SsshomeworkApplication             : Started SsshomeworkApplication in 8.452 seconds (JVM running for 11.404)
