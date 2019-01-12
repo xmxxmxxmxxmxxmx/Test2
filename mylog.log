@@ -2153,3 +2153,43 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2018-12-27 19:55:35.105  INFO 12372 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[.[/SpringDataJpaTest]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-27 19:55:35.106  INFO 12372 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2018-12-27 19:55:35.118  INFO 12372 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-01-12 20:23:46.131  INFO 832 --- [restartedMain] c.c.s.SsshomeworkApplication             : Starting SsshomeworkApplication on nkgw10nh1966 with PID 832 (E:\test2\target\classes started by Mingxing.Xia in E:\test2)
+2019-01-12 20:23:46.153  INFO 832 --- [restartedMain] c.c.s.SsshomeworkApplication             : No active profile set, falling back to default profiles: default
+2019-01-12 20:23:46.245  INFO 832 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-12 20:23:46.245  INFO 832 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-12 20:23:48.005  WARN 832 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.connext.springdatajpa]' package. Please check your configuration.
+2019-01-12 20:23:48.080  INFO 832 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-12 20:23:48.080  INFO 832 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-12 20:23:48.156  INFO 832 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 3 repository interfaces.
+2019-01-12 20:23:48.194  INFO 832 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-12 20:23:48.195  INFO 832 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-12 20:23:48.255  INFO 832 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.connext.springdatajpa.repository.ArticleRepository.
+2019-01-12 20:23:48.256  INFO 832 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.connext.springdatajpa.repository.CommentRepository.
+2019-01-12 20:23:48.257  INFO 832 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.connext.springdatajpa.repository.UserRepository.
+2019-01-12 20:23:48.257  INFO 832 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 0 repository interfaces.
+2019-01-12 20:23:48.817  INFO 832 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ac77550d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-12 20:23:48.935  INFO 832 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheConfig' of type [com.connext.springdatajpa.util.RedisCacheConfig$$EnhancerBySpringCGLIB$$6830b977] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-12 20:23:49.560  INFO 832 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-01-12 20:23:49.589  INFO 832 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-12 20:23:49.589  INFO 832 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-12 20:23:49.598  INFO 832 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\maven\apache-maven-3.1.0\bin;D:\git\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Users\mingxing.xia\AppData\Local\Microsoft\WindowsApps;C:\Users\mingxing.xia\AppData\Local\GitHubDesktop\bin;.]
+2019-01-12 20:23:49.724  INFO 832 --- [restartedMain] o.a.c.c.C.[.[.[/SpringDataJpaTest]       : Initializing Spring embedded WebApplicationContext
+2019-01-12 20:23:49.724  INFO 832 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3479 ms
+2019-01-12 20:23:50.206  INFO 832 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-12 20:23:50.266  INFO 832 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-12 20:23:50.268  INFO 832 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-01-12 20:23:50.417  INFO 832 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-12 20:23:50.539  INFO 832 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-12 20:23:50.540  WARN 832 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-01-12 20:23:50.709  INFO 832 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-01-12 20:23:50.721  INFO 832 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-12 20:23:51.991  INFO 832 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-12 20:23:52.055  INFO 832 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-01-12 20:23:52.516  INFO 832 --- [restartedMain] c.c.springdatajpa.util.RedisCacheConfig  : JedisPool注入成功！！
+2019-01-12 20:23:52.517  INFO 832 --- [restartedMain] c.c.springdatajpa.util.RedisCacheConfig  : redis地址：127.0.0.1:6379:123456
+2019-01-12 20:23:53.324  INFO 832 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-12 20:23:53.483  WARN 832 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-12 20:23:54.710  INFO 832 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/SpringDataJpaTest'
+2019-01-12 20:23:54.715  INFO 832 --- [restartedMain] c.c.s.SsshomeworkApplication             : Started SsshomeworkApplication in 9.406 seconds (JVM running for 12.465)
