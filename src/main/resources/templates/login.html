@@ -1,0 +1,85 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>登录</title>
+    <link th:href="@{/css/register.css}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet"
+          href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="header">
+    <img th:src="@{/picture/logo.png}" />
+</div>
+<div class="content">
+    <div class="picture">
+        <img th:src="@{/picture/picture.png}" />
+    </div>
+    <div class="register">
+        <form class="form-inline" name="frm">
+            <label><h3>登录</h3></label><br/> <br/>
+            <div class="form-group">
+                <input type="email" class="form-control" id="phone" value=""
+                       placeholder="请输入手机号" />
+            </div>
+            <br/> <br/>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" value=""
+                       placeholder="请输入密码" />
+            </div>
+            <br/> <br/> <br/> <br/> <br/>
+            <p>
+                <a th:href="@{/usercontroller/toregister}">快速注册</a>
+            </p>
+            <button type="button" id="login" class="btn btn-success">登录</button>
+        </form>
+    </div>
+</div>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $(function() {
+        $('.btn').click(function() {
+            var phone = $('#phone').val();
+            var password = $('#password').val();
+            $.getJSON('../userController/login', {
+                "phone" : phone,
+                "password" : password
+            }, function(data) {
+                if(data===0){
+                    alert("请将登录信息填写完整！")
+                }else if(data===1){
+                    console.log("123");
+                    location.href="../articleController/queryArticle"
+                }else if(data===2){
+                    alert("登录密码有误！")
+                }else if(data===3){
+                    alert("登录账号有误！")
+                }
+                else if(data===4){
+                    var loginbtn=document.getElementById("login");
+                    var countdown = 120;
+                    function settime(obj) {
+                        if (countdown == 0) {
+                            obj.disabled = false;
+                            obj.innerHTML = "登录";
+                            countdown = 120;
+                            loginbtn.style.background = '#5cb85c';
+                            return;
+                        } else {
+                            obj.disabled = true;
+                            obj.innerHTML = "重新发送(" + countdown + "s)";
+                            countdown--;
+                            loginbtn.style.background = '#999';
+                        }
+                        setTimeout(function() {
+                            settime(obj);
+                        }, 1000)
+                    }
+                    settime(loginbtn);
+                    alert("您登陆出错已达到3次，请在2分钟后重新进行登陆操作！");
+                }
+            })
+        })
+    })
+</script>
+</html>

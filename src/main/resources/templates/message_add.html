@@ -1,0 +1,54 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link th:href="@{/css/message.css}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet"
+          href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="header">
+    <nav class="navbar navbar-default navbar-static-top"> <img
+            th:src="@{/picture/logo.png}" />
+        <ul>
+            <li><a href="">新增文章</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form method="post" th:action="@{/messagecontroller/addmessage}">
+                    <input type="text" hidden="true" th:value="${session.loginphone}" id="loginphone" name="phone" />
+                    <lable>文章标题：</lable>
+                    <input type="text" id="messagetitle" name="messagetitle"
+                           value="" /> <br/> <br/> <br/>
+
+                    <lable style="vertical-align: top">文章正文：</lable>
+                    <textarea cols="100" rows="10" id="messagedetail" name="messagedetail"></textarea>
+
+                    <button type="submit" class="btn btn-success btn-lg">保存</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+    function savemessage(){
+        var messagetitle=$('#messagetitle').val();
+        var messagedetail=$('#messagedetail').val();
+        var phone=$('#loginphone').val();
+        var myFile=$('#myFile').val();
+        console.log(phone)
+        $.getJSON("../messagecontroller/addmessage",{"messagetitle":messagetitle,"messagedetail":messagedetail,"phone":phone,"myFile":myFile},function(data){
+            if(data===0){
+                location.href="../messagecontroller/querymessage";
+            }
+        })
+    }
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>文章详情页</title>
+    <link th:href="@{/css/message.css}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet"
+          href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="header">
+    <nav class="navbar navbar-default navbar-static-top">
+        <img th:src="@{/picture/logo.png}"/>
+        <ul>
+            <li><a href="">消息详情</a></li>
+        </ul>
+    </nav>
+
+</div>
+<div class="content">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="messagetitle" th:text="${article.messagetitle}"></div>
+            <div class="messagedate" th:text="${article.date}"></div>
+            <div class="messagecontent" th:text="${article.messagedetail}"></div>
+            <div class="comment">
+                <table class="commenttable">
+                    <label><h3>文章评论</h3></label><br/><br/>
+                    <tr th:each="ct,ctstatus:${comment}">
+                        <td th:text="${ct.username}+' : '"></td>
+                        <td style="height: 30px" th:text="${ct.commentContent}"></td>
+                        <td th:if="${ct.getUser().id==session.loginUserInfo.id} and ${session.loginUserInfo.usertype==2}">
+                            <a th:href="@{/commentController/deleteMyComment(articleId=${ct.id})}">删除</a>
+                        </td>
+                    </tr>
+                </table>
+                <form th:action="@{/commentController/addComment}">
+                    <textarea cols="100" rows="3" id="commentContent" name="commentContent"></textarea><br/>
+                    <button type="submit">提交评论</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

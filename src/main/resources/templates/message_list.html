@@ -1,0 +1,74 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>消息列表</title>
+    <link  th:href="@{/css/message.css}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+
+</head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    function go(currPage) {
+        debugger;
+        $('#currPage').val(currPage);
+        document.frm.submit();
+    }
+</script>
+<body>
+<div class="header">
+    <nav class="navbar navbar-default navbar-static-top">
+        <img th:src="@{/picture/logo.png}"/>
+        <ul>
+            <li><a href="">我的文章</a></li>
+            <li><a th:href="@{/articleController/toArticlePark}">文章乐园</a></li>
+        </ul>
+
+    </nav>
+    <div class="welcome">欢迎进入联蔚科技技术论坛</div>
+    <div id="cancel">
+        <a th:href="@{/usercontroller/cancel}">注销</a>
+    </div>
+</div>
+<div class="content">
+    <!--<form name="frm" th:action="@{/messagecontroller/querymessage}">
+        <input type="hidden" id="currPage" name="currPage" />
+    </form>-->
+    <a th:href="@{/messagecontroller/tomessageadd}" class="btn btn-success btn-sm" role="button">新增消息</a>
+    <table class="table table-striped ">
+        <tr class="label-success">
+            <th style="width: 5%">序号</th>
+            <th style="width: 40%">消息标题</th>
+            <th style="width: 15%">消息日期</th>
+            <th style="width: 10%">操作</th>
+        </tr>
+        <tr th:each="ml,mlstatus : ${messagelist}">
+            <td th:text="${mlstatus.count}"></td>
+            <td>
+                <a th:href="@{/messagecontroller/see(messageid=${ml['id']})}" th:text="${ml['messagetitle']}"></a>
+            </td>
+            <td><span th:text="${#dates.format(ml['date'],'yyyy-MM-dd')}"></span></td>
+            <td><a th:href="@{/messagecontroller/deleteone(messageid=${ml['id']})}"
+                   class="btn btn-danger btn-sm" role="button">删除</a> <a
+                    th:href="@{/messagecontroller/preupdate(messageid=${ml['id']})}"
+                    class="btn btn-success btn-sm" role="button">编辑</a></td>
+        </tr>
+
+    </table>
+
+    <!--<div>
+        共<span th:text="${messagelist.totalPage}"></span>页
+        第<span th:text="${messagelist.currPage}"></span>页
+        <a th:href="'javascript:go('+1+');'">首页</a>
+        <span th:if="${messagelist['currPage']>1}">
+            <a th:href="'javascript:go('+${messagelist.currPage-1}+');'">上一页</a>
+        </span>
+        <span th:if="${messagelist['currPage'] &lt; messagelist['totalPage'] }">
+            <a th:href="'javascript:go('+${messagelist.currPage+1}+');'">下一页</a>
+        </span>
+
+        <a th:href="|javascript:go('${messagelist.totalPage}')|">末页</a>
+    </div>-->
+</div>
+</body>
+
+</html>

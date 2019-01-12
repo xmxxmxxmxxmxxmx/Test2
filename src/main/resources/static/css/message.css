@@ -1,0 +1,90 @@
+
+.header .navbar img{
+	float:left;
+}
+
+.header .welcome{
+    float:right;
+    margin-right:50px;
+}
+
+.header .navbar ul{
+	width:600px;
+	height:53px;
+	list-style-type: none;
+}
+
+.header .navbar ul li{
+    float:left;	
+    height:50px;
+    width:100px;
+    text-align:center;
+    line-height:53px;
+    font-size:20px;
+    background-color:#c0c0c0;
+}
+.header .navbar ul li a{
+	text-decoration:none;
+	color:#000000;
+}
+
+.header #cancel{
+	width:50px;
+	float:right;
+	font-size:15px;
+	margin-bottom:10px;
+}
+
+nav ul li a:hover{
+	background-color: #808080;
+	color:#ffffff;
+	display: block;
+}
+
+.content .panel .messagetitle{
+    text-align: center;
+    margin-top: 50px;
+    margin:25px auto;
+    font-size: 23px;
+}
+.content .panel .messagedate{
+    margin-top: 30px;
+    text-align: center;
+    width:300px;
+    margin:10px auto;
+    font-size: 15px;
+}
+
+.content .panel .comment{
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+.content .panel .messagecontent{
+    text-align: center;
+    margin-top: 80px;
+    width:1000px;
+    margin:40px auto; 
+    font-size: 16px;
+}
+
+.content .panel-body{
+	background-color:bisque;
+}
+.content .panel .btndiv{
+	width:300px;
+	margin:100px auto;
+}
+.content .panel .btndiv #delete{
+	margin-left:200px;
+}
+.operateArea{
+    width:800px;
+    background: #6a6a6a;
+    margin:0 auto;
+}
+
+
+
+
+

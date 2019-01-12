@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>消息列表</title>
+    <link  th:href="@{/css/message.css}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+
+</head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<body>
+<div class="header">
+    <nav class="navbar navbar-default navbar-static-top"><img
+            th:src="@{/picture/logo.png}"/>
+        <ul>
+            <li><a th:href="@{/messagecontroller/querymessage}">我的文章</a></li>
+            <li><a href="">文章乐园</a></li>
+        </ul>
+    </nav>
+    <div id="cancel">
+        <a th:href="@{/usercontroller/cancel}">注销</a>
+    </div>
+</div>
+<div class="content">
+    <table class="table table-striped ">
+        <tr class="label-success">
+            <th style="width: 5%">序号</th>
+            <th style="width: 30%">文章标题</th>
+            <th style="width: 15%">作者</th>
+            <th style="width: 15%">发表时间</th>
+            <th style="width: 15%">评论数</th>
+            <th style="width: 15%">最后评论时间</th>
+        </tr>
+        <tr th:each="at,atstatus:${article}">
+            <td th:text="${atstatus.count}"></td>
+            <td>
+                <a th:href="@{/articleController/articleDetail(articleId=${at.id})}"  th:text="${at.messagetitle}"></a>
+            </td>
+            <td th:text="${at.getUser().username}"></td>
+            <td th:text="${#dates.format(at.date,'yyyy-MM-dd')}"></td>
+            <td th:text="${#lists.size(at.getCommentList())}"></td>
+            <td th:text="${#lists.size(at.getCommentList()) >0 ? #dates.format(at.commentList[0].date,'yyyy-MM-dd'): ''}"></td>
+        </tr>
+
+    </table>
+</div>
+</body>
+
+</html>
