@@ -115,10 +115,6 @@ public class UserController {
         return "login";
     }
 
-    public String test(){
-        return "test";
-    }
-
 
 
 }
