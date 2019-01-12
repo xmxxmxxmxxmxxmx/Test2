@@ -13,5 +13,10 @@ public class SsshomeworkApplicationTests {
     public void contextLoads() {
     }
 
+    @Test
+    public void test(){
+
+    }
+
 }
 
